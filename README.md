@@ -31,24 +31,73 @@ The URL structure for your pages must follow this format:
 ```index.html
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <title>Homepage</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hosea Felix Sanjaya</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="avatar.png">
+    <!-- Font Awesome untuk icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap" rel="stylesheet">
 </head>
+
 <body>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="profile.html">Profile</a>
-    <a href="hometown.html">Hometown</a>
-    <a href="food.html">Local Food</a>
-    <a href="tourist.html">Tourist Places</a>
-  </nav>
+    <header class="top-right">
+        <a href="https://www.instagram.com/hoseafelix_/" target="_blank">
+            <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://github.com/Pascalllllll" target="_blank">
+            <i class="fab fa-github"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/hosea-felix-sanjaya-3a9a0931b" target="_blank">
+            <i class="fab fa-linkedin"></i>
+        </a>
+        <span id="clock"></span>
+    </header>
 
-  <header>
-  </header>
+    <!-- Konten utama -->
+    <main class="center">
+        <h1>HOSEA FELIX SANJAYA</h1>
+        <h2 class="subtitle">5025241177</h2>
+    </main>
+
+    <!-- Navbar bawah -->
+    <nav class="bottom-nav">
+        <a href="index.html">Home</a>
+        <a href="profile.html">Profile</a>
+        <a href="hometown.html">Hometown</a>
+        <a href="food.html">Food</a>
+        <a href="tourist.html">Travel</a>
+    </nav>
+
+    <!-- Script jam interaktif -->
+    <script>
+        function updateClock() {
+            const now = new Date();
+            let hours = now.getHours();
+            let minutes = now.getMinutes();
+            let seconds = now.getSeconds();
+            if (hours < 10) {
+                hours = "0" + hours;
+            }
+            if (minutes < 10) {
+                minutes = "0" + minutes;
+            }
+            if (seconds < 10) {
+                seconds = "0" + seconds;
+            }
+            const timeString = hours + ":" + minutes + ":" + seconds;
+            document.getElementById("clock").textContent = timeString;
+        }
+        setInterval(updateClock, 1000);
+        updateClock();
+    </script>
+
 </body>
-</html>
 
+</html>
 ```
 
 ## Profile
