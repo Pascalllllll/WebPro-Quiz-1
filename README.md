@@ -28,7 +28,28 @@ The URL structure for your pages must follow this format:
 ---
 
 ## Homepage
-The main landing page.
+```index.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Homepage</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="profile.html">Profile</a>
+    <a href="hometown.html">Hometown</a>
+    <a href="food.html">Local Food</a>
+    <a href="tourist.html">Tourist Places</a>
+  </nav>
+
+  <header>
+  </header>
+</body>
+</html>
+
+```
 
 ## Profile
 Information about yourself.
