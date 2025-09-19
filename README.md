@@ -41,22 +41,15 @@ The URL structure for your pages must follow this format:
     <!-- Font dan icon -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap" rel="stylesheet">
-
-
 </head>
 
 <body>
     <!-- Header kanan atas -->
     <header class="top-right">
-        <a href="https://www.instagram.com/hoseafelix_/" target="_blank">
-            <i class="fab fa-instagram"></i>
-        </a>
-        <a href="https://github.com/Pascalllllll" target="_blank">
-            <i class="fab fa-github"></i>
-        </a>
-        <a href="https://www.linkedin.com/in/hosea-felix-sanjaya-3a9a0931b" target="_blank">
-            <i class="fab fa-linkedin"></i>
-        </a>
+        <a href="https://www.instagram.com/hoseafelix_/" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://github.com/Pascalllllll" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/hosea-felix-sanjaya-3a9a0931b" target="_blank"><i
+                class="fab fa-linkedin"></i></a>
         <span id="clock"></span>
     </header>
 
@@ -78,7 +71,7 @@ The URL structure for your pages must follow this format:
 
     <!-- Script jam & animasi -->
     <script>
-        // Jam
+        // Jam realtime
         function updateClock() {
             const now = new Date();
             let h = String(now.getHours()).padStart(2, "0");
@@ -89,6 +82,7 @@ The URL structure for your pages must follow this format:
         setInterval(updateClock, 1000);
         updateClock();
 
+        // Animasi fade
         window.onload = () => {
             const name = document.getElementById("name");
             const ru = document.getElementById("ru");
