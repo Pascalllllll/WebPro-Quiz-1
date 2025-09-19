@@ -112,47 +112,69 @@ A guide to tourist attractions in your hometown.
 
 ## Style.css
 ```style.css
-/* Base */
+/* ========================
+   Base Style
+======================== */
+
+/* Pastikan ukuran konsisten walaupun scrollbar muncul */
+html {
+    overflow-y: scroll;
+    /* selalu ada scrollbar */
+    scrollbar-gutter: stable;
+    /* cegah layout shifting */
+}
+
 body {
     margin: 0;
     font-family: "Poppins", sans-serif;
     background-color: #fff;
-    background-image: linear-gradient(#eee 1px, transparent 1px), linear-gradient(90deg, #eee 1px, transparent 1px);
+    background-image: linear-gradient(#eee 1px, transparent 1px),
+        linear-gradient(90deg, #eee 1px, transparent 1px);
     background-size: 40px 40px;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    color: #2c3e50;
 }
 
-/* Top Right */
+/* ========================
+   Header Top Right
+======================== */
 .top-right {
-    position: absolute;
-    top: 20px;
-    right: 30px;
+    position: fixed;
+    top: 15px;
+    right: 25px;
     display: flex;
     align-items: center;
     gap: 18px;
     font-size: 1.3rem;
+    z-index: 1000;
+    font-family: "Poppins", sans-serif;
+    /* sama di semua halaman */
 }
 
 .top-right a {
     color: #333;
-    transition: color 0.3s ease;
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.2s ease;
 }
 
 .top-right a:hover {
     color: #f39c12;
+    transform: scale(1.2);
 }
 
 #clock {
-    font-family: "Poppins", sans-serif;
-    font-weight: 700;
+    font-family: "Roboto Mono", monospace;
+    /* sama dengan index */
+    font-weight: 500;
     font-size: 1.1rem;
     letter-spacing: 1px;
-    color: #2c3e50;
 }
 
-/* Center Content */
+/* ========================
+   Center Content (Index)
+======================== */
 .center {
     flex: 1;
     display: flex;
@@ -175,7 +197,9 @@ body {
     margin-top: 10px;
 }
 
-/* Bottom Navbar */
+/* ========================
+   Bottom Navbar (global)
+======================== */
 .bottom-nav {
     position: fixed;
     bottom: 25px;
@@ -183,13 +207,14 @@ body {
     transform: translateX(-50%);
     background: rgba(0, 0, 0, 0.85);
     color: white;
-    padding: 14px 30px;
+    padding: 12px 25px;
     border-radius: 40px;
     display: flex;
-    gap: 25px;
+    gap: 22px;
     align-items: center;
     font-size: 0.95rem;
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
 }
 
 .bottom-nav a {
@@ -202,7 +227,9 @@ body {
     color: #f39c12;
 }
 
-/* Animasi fade dari atas */
+/* ========================
+   Animations
+======================== */
 @keyframes fadeDown {
     0% {
         opacity: 0;
@@ -223,55 +250,157 @@ body {
     animation: fadeDown 1s ease forwards;
 }
 
-.subtitle {
-    font-size: 2rem;
-    color: #666;
-    margin-top: 15px;
+/* ========================
+   Profile Page Sections
+======================== */
+.profile-sections {
+    overflow-y: auto;
+    scroll-behavior: smooth;
 }
 
-
-
-
-/* Profile Page Layout */
-.profile-container {
+.section {
+    min-height: 100vh;
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 50px; /* jarak foto dan teks */
-    padding: 80px 100px; /* ruang atas-bawah & kiri-kanan */
-    max-width: 1200px;
-    margin: 0 auto;
+    justify-content: space-between;
+    padding: 60px 80px;
+    gap: 40px;
 }
 
-.profile-photo img {
-    width: 250px;   /* diperbesar dari default (misalnya 180px) */
-    height: 250px;
-    border-radius: 50%; /* tetap lingkaran */
+.section-text {
+    flex: 1;
+    padding-left: 80px;
+    /* geser agak kanan */
+}
+
+.section-text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.section-text h3 {
+    font-size: 1.5rem;
+    margin-top: 25px;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.section-text p,
+.section-text ul {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #333;
+}
+
+.section-text ul {
+    list-style: none;
+    padding: 0;
+}
+
+.section-text ul li {
+    margin-bottom: 10px;
+}
+
+.section-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-image img {
+    max-width: 300px;
+    max-height: 300px;
+    border-radius: 20px;
     object-fit: cover;
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease;
 }
 
-.profile-photo img:hover {
-    transform: scale(1.05); /* efek hover membesar sedikit */
+.section-image img:hover {
+    transform: scale(1.05);
 }
 
-.profile-info h1 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
+/* ========================
+   Zigzag Boxes (Kiri)
+======================== */
+.zigzag-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    max-width: 650px;
+    /* maksimal lebar */
+    margin-top: 20px;
 }
 
-.profile-info h2 {
-    font-size: 1.5rem;
-    margin-bottom: 20px;
-    color: #555;
-}
-
-.profile-info p {
+.zigzag-box {
+    background: #f8f9fa;
+    padding: 15px 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     font-size: 1.1rem;
-    line-height: 1.7;
-    color: #333;
-    max-width: 600px;
+    font-weight: 500;
+    color: #2c3e50;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.zigzag-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* ========================
+   Gallery Zigzag (Kanan)
+======================== */
+.gallery-zigzag {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    max-width: 420px;
+    /* sedikit lebih besar */
+    position: relative;
+}
+
+.gallery-zigzag img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-zigzag img:nth-child(1) {
+    transform: rotate(-6deg) translateY(15px);
+}
+
+.gallery-zigzag img:nth-child(2) {
+    transform: rotate(5deg) translateY(-20px);
+}
+
+.gallery-zigzag img:nth-child(3) {
+    transform: rotate(-4deg) translateY(25px);
+}
+
+.gallery-zigzag img:hover {
+    transform: scale(1.1) rotate(0deg);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.3);
+}
+
+/* ========================
+   Responsive
+======================== */
+@media (max-width: 900px) {
+    .section {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 20px;
+    }
+
+    .section-text {
+        padding-left: 0;
+    }
 }
 
 ```
