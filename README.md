@@ -359,7 +359,7 @@ body {
 }
 
 .bottom-nav a:hover {
-    color: #f39c12;
+    color: #f1ba61;
 }
 
 /* ========================
@@ -392,6 +392,7 @@ body {
     overflow-y: auto;
     scroll-behavior: smooth;
     margin-left: 200px;
+    margin-top: -100px;
 }
 
 .section {
@@ -471,7 +472,7 @@ body {
 }
 
 .zigzag-box {
-    background: #f8f9fa;
+    background: #eefcff;
     padding: 15px 20px;
     border-radius: 15px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -484,8 +485,8 @@ body {
 .zigzag-box:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-    background-color: #f39c12;
-    color: white;
+    background-color: #f3b95b;
+    color: rgb(255, 255, 255);
 }
 
 /* ========================
