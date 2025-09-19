@@ -99,7 +99,142 @@ The URL structure for your pages must follow this format:
 ```
 
 ## Profile
-Information about yourself.
+```profile.html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - Hosea Felix Sanjaya</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="avatar.png">
+    <!-- Font dan icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Header kanan atas -->
+    <header class="top-right">
+        <a href="https://www.instagram.com/hoseafelix_/" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://github.com/Pascalllllll" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/hosea-felix-sanjaya-3a9a0931b" target="_blank"><i
+                class="fab fa-linkedin"></i></a>
+        <span id="clock"></span>
+    </header>
+
+    <!-- Profile Sections -->
+    <main class="profile-sections">
+        <!-- About Me -->
+        <section class="section fade-text">
+            <div class="section-text">
+                <h2>About Me</h2>
+                <p>
+                    Hello! My name is <strong>Hosea Felix Sanjaya</strong>.
+                    I am currently pursuing my studies at <strong>Institut Teknologi Sepuluh Nopember (ITS)
+                        Surabaya</strong>,
+                    majoring in <strong>Informatics Engineering</strong>.
+                </p>
+                <p>
+                    I enjoy exploring data, technology, and problem-solving.
+                    My main interests are in <em>data analysis, software development</em>, and creating impactful
+                    digital solutions.
+                    Beyond academics, I love working on collaborative projects that mix creativity with technical depth.
+                </p>
+            </div>
+            <div class="section-image">
+                <img src="avatar.jpg" alt="About Me">
+            </div>
+        </section>
+
+        <!-- Hobbies -->
+        <section class="section fade-text">
+            <div class="section-text">
+                <h2>Hobbies</h2>
+                <div class="zigzag-container">
+                    <div class="zigzag-box">🏸 Badminton</div>
+                    <div class="zigzag-box">😴 Sleeping</div>
+                    <div class="zigzag-box">🔫 PUBG</div>
+                    <div class="zigzag-box">⛏️ Minecraft</div>
+                    <div class="zigzag-box">🦔 MLBB</div>
+                </div>
+
+            </div>
+            <div class="section-image gallery-zigzag">
+                <img src="badmin.jpg" alt="Badminton">
+                <img src="gaming.jpg" alt="Gaming">
+                <img src="sleep.jpg" alt="Sleeping">
+            </div>
+        </section>
+
+        <!-- Skills -->
+        <section class="section fade-text">
+            <div class="section-text">
+                <h2>Skills</h2>
+                <h3>Hard Skills</h3>
+                <div class="zigzag-container">
+                    <div class="zigzag-box">💻 C</div>
+                    <div class="zigzag-box">⚡ C++</div>
+                    <div class="zigzag-box">🌐 HTML</div>
+                    <div class="zigzag-box">🎨 CSS</div>
+                    <div class="zigzag-box">📜 JavaScript</div>
+                    <div class="zigzag-box">🐧 Linux</div>
+                    <div class="zigzag-box">📂 MySQL</div>
+                </div>
+
+                <h3>Soft Skills</h3>
+                <div class="zigzag-container">
+                    <div class="zigzag-box">Environmental Analysis</div>
+                    <div class="zigzag-box">Emotion Prediction</div>
+                    <div class="zigzag-box">Remote Observation</div>
+                </div>
+            </div>
+            <div class="section-image gallery-zigzag">
+                <img src="prog1.jpg" alt="C++ Programming">
+                <img src="prog2.jpg" alt="Web Development">
+                <img src="prog3.jpg" alt="Database">
+            </div>
+        </section>
+    </main>
+
+    <!-- Navbar bawah -->
+    <nav class="bottom-nav" style="padding: 12px 26px; font-size: 15.1px;">
+        <a href="index.html">Home</a>
+        <a href="profile.html">Profile</a>
+        <a href="hometown.html">Hometown</a>
+        <a href="food.html">Food</a>
+        <a href="tourist.html">Travel</a>
+    </nav>
+
+    <!-- Jam + Animasi -->
+    <script>
+        function updateClock() {
+            const now = new Date();
+            let h = String(now.getHours()).padStart(2, "0");
+            let m = String(now.getMinutes()).padStart(2, "0");
+            let s = String(now.getSeconds()).padStart(2, "0");
+            document.getElementById("clock").textContent = `${h}:${m}:${s}`;
+        }
+        setInterval(updateClock, 1000);
+        updateClock();
+
+        // Animasi fade saat scroll
+        const sections = document.querySelectorAll('.section');
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('show');
+                }
+            });
+        }, { threshold: 0.5 });
+
+        sections.forEach(sec => observer.observe(sec));
+    </script>
+</body>
+
+</html>
+```
 
 ## Hometown
 A brief description of your hometown.
@@ -256,6 +391,7 @@ body {
 .profile-sections {
     overflow-y: auto;
     scroll-behavior: smooth;
+    margin-left: 200px;
 }
 
 .section {
@@ -306,6 +442,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-right: 150px;
 }
 
 .section-image img {
@@ -341,12 +478,14 @@ body {
     font-size: 1.1rem;
     font-weight: 500;
     color: #2c3e50;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: all 0.3s ease, box-shadow 0.3s ease;
 }
 
 .zigzag-box:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    background-color: #f39c12;
+    color: white;
 }
 
 /* ========================
@@ -360,6 +499,7 @@ body {
     max-width: 420px;
     /* sedikit lebih besar */
     position: relative;
+    margin-right: 200px;
 }
 
 .gallery-zigzag img {
@@ -402,5 +542,4 @@ body {
         padding-left: 0;
     }
 }
-
 ```
