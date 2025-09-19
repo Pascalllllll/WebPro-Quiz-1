@@ -131,10 +131,10 @@ The URL structure for your pages must follow this format:
             <div class="section-text">
                 <h2>About Me</h2>
                 <p>
-                    Hello! My name is <strong>Hosea Felix Sanjaya</strong>.
+                    Hello! My name is <span class="zigzag-box" style="padding: 12px;"> <strong>Hosea Felix Sanjaya</strong>.</span>
                     I am currently pursuing my studies at <strong>Institut Teknologi Sepuluh Nopember (ITS)
                         Surabaya</strong>,
-                    majoring in <strong>Informatics Engineering</strong>.
+                    majoring in <span class="zigzag-box" style="padding: 12px;"> <strong>Informatics Engineering</strong>.</span>
                 </p>
                 <p>
                     I enjoy exploring data, technology, and problem-solving.
@@ -155,9 +155,9 @@ The URL structure for your pages must follow this format:
                 <div class="zigzag-container">
                     <div class="zigzag-box">🏸 Badminton</div>
                     <div class="zigzag-box">😴 Sleeping</div>
-                    <div class="zigzag-box">🔫 PUBG</div>
+                    <div class="zigzag-box">🍗 PUBG</div>
                     <div class="zigzag-box">⛏️ Minecraft</div>
-                    <div class="zigzag-box">🦔 MLBB</div>
+                    <div class="zigzag-box">🎮 MLBB</div>
                 </div>
 
             </div>
@@ -174,13 +174,13 @@ The URL structure for your pages must follow this format:
                 <h2>Skills</h2>
                 <h3>Hard Skills</h3>
                 <div class="zigzag-container">
-                    <div class="zigzag-box">💻 C</div>
+                    <div class="zigzag-box">💦 C</div>
                     <div class="zigzag-box">⚡ C++</div>
                     <div class="zigzag-box">🌐 HTML</div>
                     <div class="zigzag-box">🎨 CSS</div>
                     <div class="zigzag-box">📜 JavaScript</div>
                     <div class="zigzag-box">🐧 Linux</div>
-                    <div class="zigzag-box">📂 MySQL</div>
+                    <div class="zigzag-box">🗃️ MySQL</div>
                 </div>
 
                 <h3>Soft Skills</h3>
