@@ -33,14 +33,14 @@ The URL structure for your pages must follow this format:
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hosea Felix Sanjaya</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/png" href="avatar.png">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/png" href="avatar.png" />
     <!-- Font dan icon -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap" rel="stylesheet" />
 </head>
 
 <body>
@@ -57,7 +57,7 @@ The URL structure for your pages must follow this format:
     <main class="center">
         <h1 id="name" class="fade-text">HOSEA FELIX SANJAYA</h1>
         <h2 id="ru" class="subtitle fade-text">Хосеа Феликс Санжая</h2>
-        <h2 id="jp" style="margin-top: -15px;" class="subtitle fade-text">ホセア・フェリックス・サンジャヤ</h2>
+        <h2 id="jp" style="margin-top: -15px" class="subtitle fade-text">ホセア・フェリックス・サンジャヤ</h2>
     </main>
 
     <!-- Navbar bawah -->
@@ -92,6 +92,8 @@ The URL structure for your pages must follow this format:
             setTimeout(() => ru.classList.add("show"), 1500);
             setTimeout(() => jp.classList.add("show"), 2500);
         };
+
+        let lastX = 0, lastY = 0, lastTime = Date.now();
     </script>
 </body>
 
@@ -199,7 +201,7 @@ The URL structure for your pages must follow this format:
     </main>
 
     <!-- Navbar bawah -->
-    <nav class="bottom-nav" style="padding: 12px 26px; font-size: 15.1px;">
+    <nav class="bottom-nav">
         <a href="index.html">Home</a>
         <a href="profile.html">Profile</a>
         <a href="hometown.html">Hometown</a>
@@ -263,13 +265,50 @@ body {
     margin: 0;
     font-family: "Poppins", sans-serif;
     background-color: #fff;
-    background-image: linear-gradient(#eee 1px, transparent 1px),
-        linear-gradient(90deg, #eee 1px, transparent 1px);
-    background-size: 40px 40px;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     color: #2c3e50;
+    position: relative;
+    overflow: hidden;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: 
+        linear-gradient(90deg, rgba(70, 70, 70, 0.08) 1.3px, transparent 1px),
+        linear-gradient(rgba(70, 70, 70, 0.08) 1.3px, transparent 1px);
+    background-size: 40px 40px;
+    animation: boxPop 17s ease-in-out infinite, boxColor 1s linear infinite;
+    z-index: -1;
+    opacity: 0.6;
+    filter: blur(0.2px); /* opsional: buat lebih halus */
+}
+
+/* Animasi kotak */
+@keyframes boxPop {
+    0% {
+        transform: scale(1);
+        opacity: 0.4;
+    }
+    50% {
+        transform: scale(1.3); /* lebih besar */
+        opacity: 0.8; /* lebih terang */
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0.4;
+    }
+}
+
+
+/* Animasi warna kotak */
+@keyframes boxColor {
+    0% { filter: hue-rotate(0deg); }
+    50% { filter: hue-rotate(180deg); }
+    100% { filter: hue-rotate(360deg); }
 }
 
 /* ========================
@@ -281,8 +320,8 @@ body {
     right: 25px;
     display: flex;
     align-items: center;
-    gap: 18px;
-    font-size: 1.3rem;
+    gap: 20px;
+    font-size: 1.5rem;
     z-index: 1000;
     font-family: "Poppins", sans-serif;
     /* sama di semua halaman */
@@ -303,7 +342,7 @@ body {
     font-family: "Roboto Mono", monospace;
     /* sama dengan index */
     font-weight: 500;
-    font-size: 1.1rem;
+    font-size: 1.3rem;
     letter-spacing: 1px;
 }
 
@@ -340,16 +379,22 @@ body {
     bottom: 25px;
     left: 50%;
     transform: translateX(-50%);
-    background: rgba(0, 0, 0, 0.85);
+    background: rgba(20, 20, 20, 0.699);
     color: white;
-    padding: 12px 25px;
+    padding: 22px 65px;
     border-radius: 40px;
     display: flex;
-    gap: 22px;
+    gap: 35px;
     align-items: center;
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
     z-index: 1000;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    /* Tambahkan pola titik */
+    background-image: radial-gradient(#00000060 1px, transparent 1px);
+    background-size: 7px 7px;
+    /* jarak antar titik */
 }
 
 .bottom-nav a {
@@ -541,6 +586,29 @@ body {
 
     .section-text {
         padding-left: 0;
+    }
+}
+
+/* Spark garis */
+.line-spark {
+    position: absolute;
+    background: grey;
+    opacity: 0.9;
+    pointer-events: none;
+    transform-origin: center;
+    animation: line-explode 0.6s ease-out forwards;
+    z-index: 2000;
+}
+
+@keyframes line-explode {
+    from {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    to {
+        transform: translate(var(--x), var(--y)) scale(0.4);
+        opacity: 0;
     }
 }
 ```
