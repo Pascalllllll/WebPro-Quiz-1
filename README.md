@@ -37,7 +37,7 @@ The URL structure for your pages must follow this format:
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hosea Felix Sanjaya</title>
     <link rel="stylesheet" href="style.css" />
-    <link rel="icon" type="image/png" href="avatar.png" />
+    <link rel="icon" type="image/png" href="img/avatar.png" />
     <!-- Font dan icon -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap" rel="stylesheet" />
@@ -110,7 +110,7 @@ The URL structure for your pages must follow this format:
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profile - Hosea Felix Sanjaya</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/png" href="avatar.png">
+    <link rel="icon" type="image/png" href="img/avatar.png">
     <!-- Font dan icon -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap" rel="stylesheet">
@@ -133,10 +133,10 @@ The URL structure for your pages must follow this format:
             <div class="section-text">
                 <h2>About Me</h2>
                 <p>
-                    Hello! My name is <span class="zigzag-box" style="padding: 12px;"> <strong>Hosea Felix Sanjaya</strong>.</span>
+                    Hello! My name is <span class="zigzag-inline"> <strong>Hosea Felix Sanjaya</strong>.</span>
                     I am currently pursuing my studies at <strong>Institut Teknologi Sepuluh Nopember (ITS)
                         Surabaya</strong>,
-                    majoring in <span class="zigzag-box" style="padding: 12px;"> <strong>Informatics Engineering</strong>.</span>
+                    majoring in <span class="zigzag-inline"> <strong>Informatics Engineering</strong>.</span>
                 </p>
                 <p>
                     I enjoy exploring data, technology, and problem-solving.
@@ -146,7 +146,7 @@ The URL structure for your pages must follow this format:
                 </p>
             </div>
             <div class="section-image">
-                <img src="avatar.jpg" alt="About Me">
+                <img src="img/avatar.jpg" alt="About Me">
             </div>
         </section>
 
@@ -156,17 +156,30 @@ The URL structure for your pages must follow this format:
                 <h2>Hobbies</h2>
                 <div class="zigzag-container">
                     <div class="zigzag-box">🏸 Badminton</div>
-                    <div class="zigzag-box">😴 Sleeping</div>
+                    <div class="zigzag-box">🌙 Sleeping</div>
+                    <div class="zigzag-box">🎮 MLBB</div>
                     <div class="zigzag-box">🍗 PUBG</div>
                     <div class="zigzag-box">⛏️ Minecraft</div>
-                    <div class="zigzag-box">🎮 MLBB</div>
+                    <div class="zigzag-box">🎵 Music</div>
+                    <div class="zigzag-box">⛩️ Anime</div>
+                    <div class="zigzag-box">🎱 Billiard</div>
+                    <div class="zigzag-box">🍽️ Culinary</div>
+                    <div class="zigzag-box">📱 Doomscrolling</div>
+                    <div class="zigzag-box">🎯 Puzzle</div>
+                    <div class="zigzag-box">▶️ YouTube</div>
+                    <div class="zigzag-box">🎬 Netflix</div>
+                    <div class="zigzag-box">💪 Gym</div>
+                    <div class="zigzag-box">🛍️ Shopping</div>
+                    <div class="zigzag-box">🌐 Browsing</div>
                 </div>
 
             </div>
             <div class="section-image gallery-zigzag">
-                <img src="badmin.jpg" alt="Badminton">
-                <img src="gaming.jpg" alt="Gaming">
-                <img src="sleep.jpg" alt="Sleeping">
+                <img src="img/badmin.jpg" alt="Badminton">
+                <img src="img/gaming.jpg" alt="Gaming">
+                <img src="img/anime.jpg" alt="Anime">
+                <img src="img/Billiard.jpg" alt="Billiard">
+                <img src="img/windah.jpg" alt="Youtube">
             </div>
         </section>
 
@@ -176,13 +189,19 @@ The URL structure for your pages must follow this format:
                 <h2>Skills</h2>
                 <h3>Hard Skills</h3>
                 <div class="zigzag-container">
-                    <div class="zigzag-box">💦 C</div>
-                    <div class="zigzag-box">⚡ C++</div>
-                    <div class="zigzag-box">🌐 HTML</div>
-                    <div class="zigzag-box">🎨 CSS</div>
-                    <div class="zigzag-box">📜 JavaScript</div>
-                    <div class="zigzag-box">🐧 Linux</div>
-                    <div class="zigzag-box">🗃️ MySQL</div>
+                    <div class="zigzag-box" onclick="window.open('https://www.w3schools.com/c/', '_blank')">💦 C</div>
+                    <div class="zigzag-box" onclick="window.open('https://www.w3schools.com/cpp/', '_blank')">⚡ C++
+                    </div>
+                    <div class="zigzag-box" onclick="window.open('https://www.w3schools.com/html/', '_blank')">🌐 HTML
+                    </div>
+                    <div class="zigzag-box" onclick="window.open('https://www.w3schools.com/css/', '_blank')">🎨 CSS
+                    </div>
+                    <div class="zigzag-box" onclick="window.open('https://www.w3schools.com/js/', '_blank')">📜
+                        JavaScript</div>
+                    <div class="zigzag-box" onclick="window.open('https://www.w3schools.com/bash/', '_blank')">🐧 Linux
+                    </div>
+                    <div class="zigzag-box" onclick="window.open('https://www.w3schools.com/sql/', '_blank')">🗃️ MySQL
+                    </div>
                 </div>
 
                 <h3>Soft Skills</h3>
@@ -193,9 +212,9 @@ The URL structure for your pages must follow this format:
                 </div>
             </div>
             <div class="section-image gallery-zigzag">
-                <img src="prog1.jpg" alt="C++ Programming">
-                <img src="prog2.jpg" alt="Web Development">
-                <img src="prog3.jpg" alt="Database">
+                <img src="img/prog1.jpg" alt="C++ Programming">
+                <img src="img/prog2.jpg" alt="Web Development">
+                <img src="img/prog3.jpg" alt="Database">
             </div>
         </section>
     </main>
@@ -252,13 +271,9 @@ A guide to tourist attractions in your hometown.
 /* ========================
    Base Style
 ======================== */
-
-/* Pastikan ukuran konsisten walaupun scrollbar muncul */
 html {
     overflow-y: scroll;
-    /* selalu ada scrollbar */
     scrollbar-gutter: stable;
-    /* cegah layout shifting */
 }
 
 body {
@@ -273,18 +288,19 @@ body {
     overflow: hidden;
 }
 
+/* Background kotak animasi */
 body::before {
     content: "";
     position: absolute;
     inset: 0;
-    background-image: 
+    background-image:
         linear-gradient(90deg, rgba(70, 70, 70, 0.08) 1.3px, transparent 1px),
         linear-gradient(rgba(70, 70, 70, 0.08) 1.3px, transparent 1px);
     background-size: 40px 40px;
-    animation: boxPop 17s ease-in-out infinite, boxColor 1s linear infinite;
+    animation: boxPop 17s ease-in-out infinite, boxColor 10s linear infinite;
     z-index: -1;
     opacity: 0.6;
-    filter: blur(0.2px); /* opsional: buat lebih halus */
+    filter: blur(0.2px);
 }
 
 /* Animasi kotak */
@@ -293,22 +309,31 @@ body::before {
         transform: scale(1);
         opacity: 0.4;
     }
+
     50% {
-        transform: scale(1.3); /* lebih besar */
-        opacity: 0.8; /* lebih terang */
+        transform: scale(1.3);
+        opacity: 0.8;
     }
+
     100% {
         transform: scale(1);
         opacity: 0.4;
     }
 }
 
-
-/* Animasi warna kotak */
+/* Animasi warna */
 @keyframes boxColor {
-    0% { filter: hue-rotate(0deg); }
-    50% { filter: hue-rotate(180deg); }
-    100% { filter: hue-rotate(360deg); }
+    0% {
+        filter: hue-rotate(0deg);
+    }
+
+    50% {
+        filter: hue-rotate(180deg);
+    }
+
+    100% {
+        filter: hue-rotate(360deg);
+    }
 }
 
 /* ========================
@@ -324,7 +349,6 @@ body::before {
     font-size: 1.5rem;
     z-index: 1000;
     font-family: "Poppins", sans-serif;
-    /* sama di semua halaman */
 }
 
 .top-right a {
@@ -340,14 +364,13 @@ body::before {
 
 #clock {
     font-family: "Roboto Mono", monospace;
-    /* sama dengan index */
     font-weight: 500;
     font-size: 1.3rem;
     letter-spacing: 1px;
 }
 
 /* ========================
-   Center Content (Index)
+   Center Content
 ======================== */
 .center {
     flex: 1;
@@ -372,16 +395,16 @@ body::before {
 }
 
 /* ========================
-   Bottom Navbar (global)
+   Bottom Navbar
 ======================== */
 .bottom-nav {
     position: fixed;
     bottom: 25px;
     left: 50%;
     transform: translateX(-50%);
-    background: rgba(20, 20, 20, 0.699);
+    background: rgba(20, 20, 20, 0.8);
     color: white;
-    padding: 22px 65px;
+    padding: 20px 55px;
     border-radius: 40px;
     display: flex;
     gap: 35px;
@@ -391,10 +414,8 @@ body::before {
     z-index: 1000;
     font-family: "Poppins", sans-serif;
     font-weight: 700;
-    /* Tambahkan pola titik */
     background-image: radial-gradient(#00000060 1px, transparent 1px);
     background-size: 7px 7px;
-    /* jarak antar titik */
 }
 
 .bottom-nav a {
@@ -405,6 +426,7 @@ body::before {
 
 .bottom-nav a:hover {
     color: #f1ba61;
+    transform: scale(1.1);
 }
 
 /* ========================
@@ -431,7 +453,7 @@ body::before {
 }
 
 /* ========================
-   Profile Page Sections
+   Profile Sections
 ======================== */
 .profile-sections {
     overflow-y: auto;
@@ -447,12 +469,13 @@ body::before {
     justify-content: space-between;
     padding: 60px 80px;
     gap: 40px;
+    flex-wrap: wrap;
+    /* supaya responsif */
 }
 
 .section-text {
     flex: 1;
     padding-left: 80px;
-    /* geser agak kanan */
 }
 
 .section-text h2 {
@@ -501,18 +524,17 @@ body::before {
 }
 
 .section-image img:hover {
-    transform: scale(1.05);
+    transform: scale(1.1);
 }
 
 /* ========================
-   Zigzag Boxes (Kiri)
+   Zigzag Boxes
 ======================== */
 .zigzag-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
     gap: 20px;
     max-width: 650px;
-    /* maksimal lebar */
     margin-top: 20px;
 }
 
@@ -525,17 +547,18 @@ body::before {
     font-weight: 500;
     color: #2c3e50;
     transition: all 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
 }
 
 .zigzag-box:hover {
-    transform: translateY(-5px);
+    transform: translateY(-5px) scale(1.05);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
     background-color: #f3b95b;
-    color: rgb(255, 255, 255);
+    color: #fff;
 }
 
 /* ========================
-   Gallery Zigzag (Kanan)
+   Gallery Zigzag
 ======================== */
 .gallery-zigzag {
     display: flex;
@@ -543,7 +566,6 @@ body::before {
     justify-content: center;
     gap: 25px;
     max-width: 420px;
-    /* sedikit lebih besar */
     position: relative;
     margin-right: 200px;
 }
@@ -566,12 +588,35 @@ body::before {
 }
 
 .gallery-zigzag img:nth-child(3) {
-    transform: rotate(-4deg) translateY(25px);
+    transform: rotate(7deg) translateY(15px);
+}
+
+.gallery-zigzag img:nth-child(4) {
+    transform: rotate(3deg) translateY(1px);
+}
+
+.gallery-zigzag img:nth-child(5) {
+    transform: rotate(-8deg) translateY(10px);
 }
 
 .gallery-zigzag img:hover {
-    transform: scale(1.1) rotate(0deg);
+    transform: scale(1.3) rotate(0deg);
     box-shadow: 0 12px 35px rgba(0, 0, 0, 0.3);
+}
+
+.zigzag-inline {
+    display: inline-block;
+    padding-left: 12px;
+    padding-right: 10px;
+    font-size: 1em;
+    border-radius: 10px;
+    background: #f0f2f385;
+    transition: all 0.3s ease;
+}
+
+.zigzag-inline:hover {
+    background-color: #ff73c59d;
+    color: #fff;
 }
 
 /* ========================
@@ -585,30 +630,53 @@ body::before {
     }
 
     .section-text {
-        padding-left: 0;
-    }
-}
-
-/* Spark garis */
-.line-spark {
-    position: absolute;
-    background: grey;
-    opacity: 0.9;
-    pointer-events: none;
-    transform-origin: center;
-    animation: line-explode 0.6s ease-out forwards;
-    z-index: 2000;
-}
-
-@keyframes line-explode {
-    from {
-        transform: scale(1);
-        opacity: 1;
+        padding: 0;
+        margin: 0 auto;
+        text-align: center;
     }
 
-    to {
-        transform: translate(var(--x), var(--y)) scale(0.4);
-        opacity: 0;
+    .section-image {
+        margin: 20px auto 0;
+    }
+
+    .section-image img {
+        max-width: 220px;
+        max-height: 220px;
+    }
+
+    .gallery-zigzag {
+        margin-right: 0;
+    }
+
+    .profile-sections {
+        margin-left: 0;
+        margin-top: 0;
+        padding: 0 15px;
+        /* kasih padding biar gak mentok kiri-kanan */
+    }
+
+
+}
+
+@media (max-width: 600px) {
+    .section-text h2 {
+        font-size: 2rem;
+    }
+
+    .section-text p {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+
+    .section-image img {
+        max-width: 180px;
+        max-height: 180px;
+    }
+
+    .bottom-nav {
+        padding: 12px 20px;
+        gap: 18px;
+        font-size: 0.8rem;
     }
 }
 ```
