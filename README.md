@@ -19,14 +19,14 @@ Your website must include the following pages/sections:
 
 ### B. Page Routing
 The URL structure for your pages must follow this format:
+```
 quiz1/
 ├── index.html
 ├── style.css
 ├── script.js
+│
 ├── img/
-│   ├── avatar.jpg
-│   ├── monumen.jpg
-│   └── (etc...)
+│   └── (gambar-gambar)
 │
 ├── profile/
 │   └── index.html
@@ -39,6 +39,7 @@ quiz1/
 │
 └── tourist/
     └── index.html
+```
 ---
 
 ## Homepage
