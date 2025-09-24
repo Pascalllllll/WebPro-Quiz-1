@@ -19,12 +19,26 @@ Your website must include the following pages/sections:
 
 ### B. Page Routing
 The URL structure for your pages must follow this format:
-- `(Your Domain)/quiz1` → Homepage  
-- `(Your Domain)/quiz1/profile` → Profile page  
-- `(Your Domain)/quiz1/hometown` → Hometown page  
-- `(Your Domain)/quiz1/food` → Local Food page  
-- `(Your Domain)/quiz1/tourist` → Tourist Places page
-
+quiz1/
+├── index.html
+├── style.css
+├── script.js
+├── img/
+│   ├── avatar.jpg
+│   ├── monumen.jpg
+│   └── (etc...)
+│
+├── profile/
+│   └── index.html
+│
+├── hometown/
+│   └── index.html
+│
+├── food/
+│   └── index.html
+│
+└── tourist/
+    └── index.html
 ---
 
 ## Homepage
