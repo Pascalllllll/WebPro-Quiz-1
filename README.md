@@ -42,7 +42,7 @@ quiz1/
 ```
 ---
 ### You Can Access My Website From the Link Below
-#### https://pascalllllll.github.io/quiz1/ target="_blank"
+####[go]([https://pascalllllll.github.io/quiz1/])){:target="_blank"}
 
 ---
 
